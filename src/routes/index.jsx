@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import Logout from "../pages/Logout";
 import AdminPage from "../pages/Admin/AdminPage";
 import UserPage from "../pages/User/UserPage";
+import HomePage from "../pages/HomePage";
 
 const Routes = () => {
   const { token } = useAuth();
@@ -71,7 +72,7 @@ const Routes = () => {
   const routesForNotAuthenticatedOnly = [
     {
       path: "/",
-      element: <div>Home Page</div>,
+      element: <HomePage/>,
     },
     {
       path: "/login",
@@ -104,7 +105,7 @@ const Routes = () => {
 
   // Provide the router configuration using RouterProvider
   return <>
-    <RouterProvider router={router} />;
+    <RouterProvider router={router} />
   </> 
 };
 
