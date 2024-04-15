@@ -35,3 +35,19 @@ code {
 *::-webkit-scrollbar-thumb {
     background-color: rgba(194, 194, 194, 0.226);
 }
+
+@keyframes placeholder {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.placeholder-animate::placeholder {
+    animation: placeholder 1.5s infinite;
+}
