@@ -1,5 +1,4 @@
 import { useNavigate,Link } from "react-router-dom";
-import { register } from "../services/authService";
 import {useState} from "react";
 import { toast } from 'react-toastify';
 import Input from "../components/Input/Input";
@@ -34,7 +33,8 @@ const Register = () => {
     // if error, show error message
     event.preventDefault();
     
-    const response = await register(formData);
+    // const response = await register(formData);
+    const response = "";
     if (response === undefined) {
       toast.error(`Server is not available, please try again later`, {
         position: "top-center",

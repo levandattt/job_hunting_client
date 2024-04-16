@@ -9,7 +9,6 @@ const Header = ({children, className, disabled}) => {
 
     return (
         <div className={` select-none `}>
-            Header
         </div>
     )
   };
