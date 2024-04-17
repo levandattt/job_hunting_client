@@ -329,7 +329,7 @@ export const getHistories = async() => {
                 },
                 {
                     "id": "8cc90b70-afbc-40e1-b832-ddf35225cf1f",
-                    "title": "Tổng hợp sản phẩm & doanh thu",
+                    "title": "Senior Java Skills: Comprehensive RequirementsSenior Java Skills: Comprehensive Requirements",
                     "create_time": "2024-03-29T02:56:00.793473+00:00",
                     "update_time": "2024-03-29T03:39:19.008329+00:00",
                     "mapping": null,
@@ -346,7 +346,6 @@ export const getHistories = async() => {
             "has_missing_conversations": false
         }
         return fakeData;
-
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/histories`);
         return response.data;
     } catch (error) {

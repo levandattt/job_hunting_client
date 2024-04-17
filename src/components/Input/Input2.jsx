@@ -1,5 +1,3 @@
-import {useState, useEffect} from 'react';
-import { MdErrorOutline } from "react-icons/md";
 
 const Input2 = ({icon, iconOnly, placeholder, value, onChange, type, onKeyStop, name, onKeyDown, required, className, onClick}) => {
     return (

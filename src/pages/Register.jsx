@@ -3,7 +3,7 @@ import {useState} from "react";
 import { toast } from 'react-toastify';
 import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
-import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 
@@ -78,6 +78,7 @@ const Register = () => {
     onError: (error) => console.log('Login Failed:', error)
 });
 const [ user, setUser ] = useState([]);
+
 return(
     <div className={'w-full flex'}>
         {/*  */}

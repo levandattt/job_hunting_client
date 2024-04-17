@@ -1,5 +1,3 @@
-import {useState, useEffect} from 'react';
-import { MdErrorOutline } from "react-icons/md";
 import { BiSend } from "react-icons/bi";
 
 const Search = ({icon, iconOnly, placeholder, value, onChange, type, onKeyStop, name, onKeyDown, required, className, onClick}) => {

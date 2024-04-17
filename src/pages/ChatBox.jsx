@@ -1,11 +1,6 @@
-import {useState, useEffect} from 'react';
-import { MdErrorOutline } from "react-icons/md";
 
 const ChatBox = ({children, onClick, className, disabled}) => {
-    const [state, setState] = useState({
-        message: '',
-        messages: []
-    });
+   
 
     return (
         <div className={`w-full h-full px-10 flex items-center justify-center`}>

@@ -1,22 +1,33 @@
-import { useNavigate, Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
-
+import { getHistories } from "../api/conversation";
 import ChatBox from "./ChatBox";
 import Header from "../components/Header/Header";
 import Search from "../components/Search/Search";
 import SideBar from "../components/Sidebar/Sidebar";
 const HomePage = () => {
+  const [histories, setHistories] = useState({});
+  
+  const fetchData = async (limit = 10, offset = 0) => {
+    try {
+      const data = await getHistories(limit, offset);
+      await setHistories(data);
+    } catch (error) {
+      console.error('Error fetching histories:', error);
+    }
+  };
 
-
+  useEffect(() => {
+    fetchData();
+  }, []); // Empty dependency array to run only once when the component mounts
 
   return(
-    <div classnName={'relative'}>
+    <div className={'relative'}>
         <div className={'absolute h-full w-full z-1'}>
           <div className={'flex px-3 py-3 h-full w-full'}>
-            <SideBar/>
+            <SideBar data={histories}/>
 
             {/* Chat box section */}
-            <div className={'flex flex-col w-full relative'}>
+            <div className={'flex flex-col w-full h-full relative'}>
 
               {/* Header */}
               <Header/> 
