@@ -1,6 +1,27 @@
+import { useState, useEffect } from "react";
 import { BiSend } from "react-icons/bi";
 
-const Search = ({icon, iconOnly, placeholder, value, onChange, type, onKeyStop, name, onKeyDown, required, className, onClick}) => {
+const ChatInputBox = ({icon, iconOnly, placeholder, value, onChange, type, onKeyStop, name, onKeyDown, required, className, onClick}) => {
+    // const [placeholderText, setPlaceholderText] = useState('');
+    // const [placeholderIndex, setPlaceholderIndex] = useState(0);
+    
+    // function type() {
+    //   console.log('called')
+    //   if(placeholderIndex < placeholder.split(' ').length) {
+    //     setPlaceholderText(placeholderText +' '+ placeholder.split(' ')[placeholderIndex]);
+    //     setPlaceholderIndex(placeholderIndex + 1);
+    //   }
+    //   else{
+    //       setPlaceholderIndex(0)
+    //       setPlaceholderText('')
+    //   }
+    //   setTimeout(type, 1000);
+    // }
+
+    // useEffect(() => {
+    //   type();
+    // }, []);
+
     return (
         <div  className={`w-full ${iconOnly?'flex-none':'flex-auto'} bg-white rounded-full ${className}`}>
             <div className={`flex  ${iconOnly?'':''} justify-center items-center w-full`}>
@@ -12,5 +33,5 @@ const Search = ({icon, iconOnly, placeholder, value, onChange, type, onKeyStop, 
     )
   };
   
-  export default Search;
+  export default ChatInputBox;
   

@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
-import { getHistories } from "../api/conversation";
-import ChatBox from "./ChatBox";
-import Header from "../components/Header/Header";
-import Search from "../components/Search/Search";
-import SideBar from "../components/Sidebar/Sidebar";
+import { getHistories } from "../../api/conversation";
+import ChatBox from "../ChatBox";
+import Header from "./components/Header";
+import ChatInputBox from "./components/InputChatBox";
+import SideBar from "./components/Sidebar";
 const HomePage = () => {
   const [histories, setHistories] = useState({});
   
@@ -38,7 +38,7 @@ const HomePage = () => {
               {/* chat box input  */}
               <div className={'absolute bottom-0 flex justify-center w-full'}>
                 <div className={`w-1/2 mb-5 drop-shadow-[0_10px_15px_rgba(27,34,125,0.2)]`}>
-                  <Search placeholder={`What’s in your mind?...`} icon={'🧠'}/>
+                  <ChatInputBox placeholder={`What’s in your mind?...`} icon={'🧠'}/>
                 </div>
               </div>
 

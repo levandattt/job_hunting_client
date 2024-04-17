@@ -7,7 +7,7 @@ import Register from "../pages/Register";
 import Logout from "../pages/Logout";
 import AdminPage from "../pages/Admin/AdminPage";
 import UserPage from "../pages/User/UserPage";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HomePage/HomePage";
 
 const Routes = () => {
   const { token } = useAuth();
