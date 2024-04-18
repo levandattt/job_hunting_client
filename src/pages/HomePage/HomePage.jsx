@@ -23,8 +23,8 @@ const HomePage = () => {
   return(
     <div className={'relative'}>
         <div className={'absolute h-full w-full z-1'}>
-          <div className={'flex px-3 py-3 h-full w-full'}>
-            <SideBar data={histories}/>
+          <div className={'flex md:px-3 md:py-3 h-full w-full relative'}>
+            <SideBar data={histories} className={``}/>
 
             {/* Chat box section */}
             <div className={'flex flex-col w-full h-full relative'}>
