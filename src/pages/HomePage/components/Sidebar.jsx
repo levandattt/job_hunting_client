@@ -155,12 +155,12 @@ const Sidebar = ({className,children, data}) => {
                                 </div>
                             </div>
                             {/* sidebar button */}
-                            <div className={' flex w-full h-15 transition-width easy-in-out'}>
-                                <div className={`${!isSidebarBtnClose?'w-full':'w-16'} transition-all ease-out mr-3 `}>
-                                    <Button2 className={`text-white p-2 h-16 min-w-16 w-full rounded-full bg-violet-300`} icon={<FiPlus/>} onClick={onNewChatBtnClick} iconOnly={isSidebarBtnClose}>New Chat</Button2>
+                            <div className={' flex w-full h-15 transition-all easy-in-out'}>
+                                <div className={`${!isSidebarBtnClose?'w-full':'w-15'} transition-all ease-out mr-3 `}>
+                                    <Button2 className={`text-white p-2 h-15 min-w-15 w-full rounded-full bg-violet-300`} icon={<FiPlus/>} onClick={onNewChatBtnClick} iconOnly={isSidebarBtnClose}>New Chat</Button2>
                                 </div>
-                                <div className={`${isSidebarBtnClose?'w-full':'w-16'} transition-all ease-out`}>
-                                    <Input2 className={`text-white p-2 h-16 min-w-16 ${!isSidebarBtnClose?'w-full':''} rounded-full bg-violet-900 `} icon={<IoSearch/>} onClick={onSearchBtnClick} iconOnly={!isSidebarBtnClose} placeholder={'Search conversation...'}/>
+                                <div className={`${isSidebarBtnClose?'w-full':'w-15'} transition-all ease-out`}>
+                                    <Input2 className={`text-white p-2 h-15 min-w-15 ${!isSidebarBtnClose?'w-full':''} rounded-full bg-violet-900 `} icon={<IoSearch/>} onClick={onSearchBtnClick} iconOnly={!isSidebarBtnClose} placeholder={'Search conversation...'}/>
                                 </div>
                             </div>
 
