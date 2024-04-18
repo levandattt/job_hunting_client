@@ -37,7 +37,7 @@ const HomePage = () => {
 
               {/* chat box input  */}
               <div className={'absolute bottom-0 flex justify-center w-full'}>
-                <div className={`w-1/2 mb-5 drop-shadow-[0_10px_15px_rgba(27,34,125,0.2)]`}>
+                <div className={`min-[0px]:max-lg:w-5/6 w-1/2 mb-5 drop-shadow-[0_10px_15px_rgba(27,34,125,0.2)]`}>
                   <ChatInputBox placeholder={`What’s in your mind?...`} icon={'🧠'}/>
                 </div>
               </div>

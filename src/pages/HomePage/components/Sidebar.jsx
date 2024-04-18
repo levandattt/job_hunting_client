@@ -127,6 +127,13 @@ const Sidebar = ({className,children, data}) => {
           if(newWidth < 768){
             setIsColapse(true);
         }
+        const handleResize = () => {
+            const newWidth = window.innerWidth;
+            if(newWidth < 768){
+                setIsColapse(true);
+            }
+        };
+        window.addEventListener('resize', handleResize);
     }, []);
 
     return (
