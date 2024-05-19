@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Install package
+```bash
+    npm install
+```
+# Config .env
+- API URL
+    -   `REACT_APP_API_BASE=http://localhost:6970`
+- Lấy danh sách conversation history ở sidebar:
+    - `REACT_APP_API_GET_CONVERSATION_HISTORY=/api/v1/test/conversation/history`
+    - API: `{REACT_APP_API_BASE} / {REACT_APP_API_GET_CONVERSATION_HISTORY}`
+    - Response:
+    ```code
+    {
+        histories: [
+        {
+            id: <String>,
+            title:  <String>,
+            createdAt: <DATETIME>,
+        }
+        ],
+    }
+    ```
+- Lấy danh sách tin nhắn trong conversation
+    - `REACT_APP_API_GET_CONVERSATION=/api/v1/test/chat`
+    - API: `{REACT_APP_API_BASE} / {REACT_APP_API_GET_CONVERSATION} / :conversationID`
+    - Response:
+    ```code
+    {
+        messages: [
+            {
+                id: <String>,
+                from: ENUM('user', 'assistant'),
+                content:<String>,
+            },
+        ]
+    }
+    ```
+- Yêu cầu một tạo conversation mới
+    - `REACT_APP_API_NEW_CONVERSATION=/api/v1/test/chat`
+    - API:`{REACT_APP_API_BASE} / {REACT_APP_API_NEW_CONVERSATION}`
+    - Response:
+    ```code
+    {
+        "id": <String> //id của conversation
+    }
+    ```
+- Đặt câu hỏi mới 
+    - `REACT_APP_API_NEW_REQUEST=/api/v1/test/chat/new`
+    - API: `{REACT_APP_API_BASE} / {REACT_APP_API_NEW_CONVERSATION}`
+    - Body:
+    ```
+    {
+        message:<String>
+    }
+    ```
+    - Response:(stream)
+    ```
+    {"type":"status","status":"started"}
+    {"type":"status","status":"title","message":"<cái title hiện bên sidebar>"}
+    {"type":"id","id":"<id của câu trả lời>"}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    {"type":"stream","token":"<câu trả lời được cắt nhỏ để stream>"}
+    ...
+    {"type":"stream","token":"<câu trả lời được cắt nhỏ để stream>"}
+    
+    {"type":"finalAnswer","text":"<This is the final answer.>"}
+    ```
+# Run
+```bash
+    npm start
+```
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#
