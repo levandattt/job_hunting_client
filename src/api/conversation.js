@@ -50,3 +50,19 @@ export const sendMessage = async (id, message) => {
     throw error;
   }
 };
+
+export const getNewConversation = async (id) => {
+  try {
+    const response = await axios.get(
+      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_CONVERSATION}`
+    );
+
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(response);
+      }, 2000);
+    });
+  } catch (error) {
+    throw error;
+  }
+};

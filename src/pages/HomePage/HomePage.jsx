@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { getHistories, getConversation } from "../../api/conversation";
+import { useNavigate } from "react-router-dom";
+import {
+  getHistories,
+  getConversation,
+  getNewConversation,
+} from "../../api/conversation";
 import ChatBox from "../ChatBox";
 import Header from "./components/Header";
 import { RiLoader2Line } from "react-icons/ri";
@@ -7,6 +12,7 @@ import ChatInputBox from "./components/InputChatBox";
 import SideBar from "./components/Sidebar";
 import { useParams } from "react-router-dom";
 const HomePage = () => {
+  const navigate = useNavigate();
   const [histories, setHistories] = useState({});
   const [conversation, setConversation] = useState([]);
   const [newConversation, setNewConversation] = useState([" hihihih"]);
@@ -110,11 +116,27 @@ const HomePage = () => {
       setConversation([]);
     }
   }, [id]); // Empty dependency array to run only once when the component mounts
+
+  const onNewConversation = async () => {
+    try {
+      setChatLoading(true);
+      const response = await getNewConversation();
+      console.log(response);
+      navigate(`/chat/${response?.data?.id}`);
+      setChatLoading(false);
+    } catch (error) {
+      console.error("Error fetching new conversation:", error);
+    }
+  };
   return (
     <div className={"relative overflow-hidden"}>
       <div className={"absolute h-full w-full z-1"}>
         <div className={"flex md:px-3 md:py-3 h-full w-full relative"}>
-          <SideBar className={``} data={histories} />
+          <SideBar
+            className={``}
+            data={histories}
+            onNewConversation={onNewConversation}
+          />
           {/* Chat box section */}
           <div className={"relative flex flex-col w-full relative "}>
             {/* Header */}

@@ -14,7 +14,7 @@ import { BsChevronCompactRight } from "react-icons/bs";
 import { RiLoader2Line } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
 import { LuPanelLeftOpen } from "react-icons/lu";
-const Sidebar = ({ className, children, data }) => {
+const Sidebar = ({ className, children, data, onNewConversation }) => {
   const [histories, setHistories] = useState([]);
   const [isColapse, setIsColapse] = useState(false);
   const [isColapseHover, setIsColapseHover] = useState(false);
@@ -27,7 +27,7 @@ const Sidebar = ({ className, children, data }) => {
   };
 
   const onNewChatBtnClick = (value) => {
-    console.log(value);
+    onNewConversation();
     if (value) {
       setIsSidebarBtnClose(!isSidebarBtnClose);
     }
