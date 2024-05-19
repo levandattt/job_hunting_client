@@ -7,9 +7,10 @@ const Header = ({children, className, disabled}) => {
     });
 
     return (
-        <div className={` select-none `}>
-        </div>
-    )
+      <div className={` select-none  w-full `}>
+        <div className={`py-3`}>Model 3.4</div>
+      </div>
+    );
   };
   
   export default Header;
