@@ -5,8 +5,9 @@
 # Config .env
 - API URL
     -   `REACT_APP_API_BASE=http://localhost:6970`
+
 - Lấy danh sách conversation history ở sidebar:
-    - `REACT_APP_API_GET_CONVERSATION_HISTORY=/api/v1/test/conversation/history`
+    - env: `REACT_APP_API_GET_CONVERSATION_HISTORY=/api/v1/test/conversation/history`
     - API: `{REACT_APP_API_BASE} / {REACT_APP_API_GET_CONVERSATION_HISTORY}`
     - Response:
     ```code
@@ -20,8 +21,9 @@
         ],
     }
     ```
+
 - Lấy danh sách tin nhắn trong conversation
-    - `REACT_APP_API_GET_CONVERSATION=/api/v1/test/chat`
+    - env: `REACT_APP_API_GET_CONVERSATION=/api/v1/test/chat`
     - API: `{REACT_APP_API_BASE} / {REACT_APP_API_GET_CONVERSATION} / :conversationID`
     - Response:
     ```code
@@ -35,8 +37,9 @@
         ]
     }
     ```
+
 - Yêu cầu một tạo conversation mới
-    - `REACT_APP_API_NEW_CONVERSATION=/api/v1/test/chat`
+    - env: `REACT_APP_API_NEW_CONVERSATION=/api/v1/test/chat`
     - API:`{REACT_APP_API_BASE} / {REACT_APP_API_NEW_CONVERSATION}`
     - Response:
     ```code
@@ -44,8 +47,9 @@
         "id": <String> //id của conversation
     }
     ```
+    
 - Đặt câu hỏi mới 
-    - `REACT_APP_API_NEW_REQUEST=/api/v1/test/chat/new`
+    - env: `REACT_APP_API_NEW_REQUEST=/api/v1/test/chat/new`
     - API: `{REACT_APP_API_BASE} / {REACT_APP_API_NEW_CONVERSATION}`
     - Body:
     ```

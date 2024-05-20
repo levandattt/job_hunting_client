@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "8e17f810-860d-4b95-8b8d-400a3f00f25b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22018305",
+		"_collection_link": "https://crimson-comet-487363.postman.co/workspace/pbl~5bff5f25-7b82-4517-bcff-8ecfd03b7085/collection/22018305-8e17f810-860d-4b95-8b8d-400a3f00f25b?action=share&source=collection_link&creator=22018305"
+	},
+	"item": [
+		{
+			"name": "Get list conversations histories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:6970/api/v1/test/conversation/history"
+			},
+			"response": [
+				{
+					"name": "Get list conversations histories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:6970/api/v1/test/conversation/history"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1145"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"479-cp9YgZaP6I7JLIWvP9Gv15Z/Gzo\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 02:42:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"histories\": [\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564561\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564562\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564563\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564564\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564565\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564566\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564567\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564568\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564569\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564570\",\n            \"title\": \"Python Snake Game\",\n            \"createdAt\": \"2024-05-23T20:03:21.000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get conversation message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:6970/api/v1/test/chat/:conversationID",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6970",
+					"path": [
+						"api",
+						"v1",
+						"test",
+						"chat",
+						":conversationID"
+					],
+					"variable": [
+						{
+							"key": "conversationID",
+							"value": "b9e21cfe-c384-440c-a73d-c5810a68b665"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get conversation message",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:6970/api/v1/test/chat/:conversationID",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6970",
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"chat",
+								":conversationID"
+							],
+							"variable": [
+								{
+									"key": "conversationID",
+									"value": "b9e21cfe-c384-440c-a73d-c5810a68b665"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "9704"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25e8-UrgPwcICIN+OvBoDKku7QeSMlpE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 02:43:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messages\": [\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a68b664\",\n            \"from\": \"user\",\n            \"content\": \"As a restaurant owner, write a professional email to the supplier to get these products every week: \\n\\n      - Wine (x10)\\n      - Eggs (x24)\\n      - Bread (x12)\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a564561\",\n            \"from\": \"assistant\",\n            \"content\": \"Here's a basic implementation of the Snake game in Python using the `pygame` library. I'll explain each step as we go along.\\nFirst, make sure you have `pygame` installed. You can install it using the following command:\\n```bash\\npip install pygame\\n```\\nNow, let's begin coding the Snake game:\\n```python\\nimport pygame\\nimport random\\n# Initialize pygame\\npygame.init()\\n# Set up display\\nwidth, height = 640, 480\\nscreen = pygame.display.set_mode((width, height))\\npygame.display.set_caption(\\\"Snake Game\\\")\\n# Colors\\nblack = (0, 0, 0)\\nwhite = (255, 255, 255)\\ngreen = (0, 255, 0)\\nred = (255, 0, 0)\\n# Snake initial position and properties\\nsnake_pos = [100, 50]\\nsnake_body = [[100, 50], [90, 50], [80, 50]]\\nsnake_direction = \\\"RIGHT\\\"\\nchange_to = snake_direction\\n# Food position and properties\\nfood_pos = [random.randrange(1, (width//10)) * 10, random.randrange(1, (height//10)) * 10]\\nfood_spawn = True\\n# Score\\nscore = 0\\n# Clock to control game speed\\nclock = pygame.time.Clock()\\ndef draw_snake(snake_body):\\n    for pos in snake_body:\\n        pygame.draw.rect(screen, green, (pos[0], pos[1], 10, 10))\\ndef draw_food():\\n    pygame.draw.rect(screen, white, (food_pos[0], food_pos[1], 10, 10))\\ndef message(msg, color):\\n    font = pygame.font.SysFont(None, 48)\\n    screen.blit(font.render(msg, True, color), [width/3, height/3])\\ndef game_over():\\n    message(\\\"Game Over\\\", red)\\n    pygame.display.flip()\\n    pygame.time.wait(1000)\\n    pygame.quit()\\n    quit()\\n# Main game loop\\nwhile True:\\n    for event in pygame.event.get():\\n        if event.type == pygame.QUIT:\\n            pygame.quit()\\n            quit()\\n        elif event.type == pygame.KEYDOWN:\\n            if event.key == pygame.K_UP:\\n                change_to = \\\"UP\\\"\\n            elif event.key == pygame.K_DOWN:\\n                change_to = \\\"DOWN\\\"\\n            elif event.key == pygame.K_LEFT:\\n                change_to = \\\"LEFT\\\"\\n            elif event.key == pygame.K_RIGHT:\\n                change_to = \\\"RIGHT\\\"\\n    # Update snake direction\\n    snake_direction = change_to\\n    # Move the snake\\n    new_pos = [snake_pos[0] + 10 * dir[0] for dir in [(0, 1), (-1, 0), (0, -1), (1, 0)][snake_direction == \\\"DOWN\\\", snake_direction == \\\"UP\\\", snake_direction == \\\"LEFT\\\", snake_direction == \\\"RIGHT\\\"]]\\n    snake_body.insert(0, list(new_pos))\\n    # Check if the snake hits itself\\n    if snake_pos[0] == snake_pos[1] and snake_pos in snake_body[1:]:\\n        game_over()\\n    # Check if the snake hits the wall\\n    if snake_pos[0] < 0 or snake_pos[0] >= width or snake_pos[1] < 0 or snake_pos[1] >= height:\\n        game_over()\\n    # Remove the last segment of the snake\\n    snake_body.pop()\\n    snake_pos = new_pos\\n    # Spawn food\\n    if food_spawn:\\n        food_pos = [random.randrange(1, (width//10)) * 10, random.randrange(1, (height//10)) * 10]\\n        food_spawn = False\\n    # Check if the snake ate the food\\n    if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:\\n        score += 1\\n        food_spawn = True\\n    # Draw the snake and the food\\n    screen.fill(black)\\n    draw_snake(snake_body)\\n    draw_food()\\n    message(\\\"Score: \\\" + str(score), white)\\n    pygame.display.flip()\\n    # Control game speed\\n    clock.tick(10)\\n```\\nExplanation:\\n1. We import the necessary modules, `pygame` for graphics and `random` for generating random food positions.\\n2. We initialize `pygame` and set up the display window.\\n3. We define some colors that we'll use for the game elements.\\n4. We set the initial position and properties of the snake and the food.\\n5. We define functions to draw the snake, draw the food, display a message, and handle game over conditions.\\n6. The main game loop runs continuously until the game is quit.\\n   - It checks for events like key presses and the close button being clicked.\\n   - It updates the snake's direction based on arrow key presses.\\n   - It moves the snake and updates its position.\\n   - It checks for collisions with itself and the walls, and ends the game if a collision occurs.\\n   - It removes the last segment of the snake's body and updates its position.\\n   - It spawns food if it's not already spawned.\\n   - It checks if the snake ate the food and updates the score accordingly.\\n   - It draws the snake, food, and score on the screen.\\n   - It controls the game speed using the clock.\\nThis is a basic implementation of the Snake game. You can further enhance it by adding features like levels, difficulty settings, and sound effects.\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a68b568\",\n            \"from\": \"user\",\n            \"content\": \"As a restaurant owner, write a professional email to the supplier to get these products every week: \\n\\n      - Wine (x10)\\n      - Eggs (x24)\\n      - Bread (x12)\"\n        },\n        {\n            \"id\": \"b9e21cfe-c384-440c-a73d-c5810a545876\",\n            \"from\": \"assistant\",\n            \"content\": \"Here's a basic implementation of the Snake game in Python using the `pygame` library. I'll explain each step as we go along.\\nFirst, make sure you have `pygame` installed. You can install it using the following command:\\n\\n```bash\\npip install pygame\\n```\\nNow, let's begin coding the Snake game:\\n\\n```python\\nimport pygame\\nimport random\\n# Initialize pygame\\npygame.init()\\n# Set up display\\nwidth, height = 640, 480\\nscreen = pygame.display.set_mode((width, height))\\npygame.display.set_caption(\\\"Snake Game\\\")\\n# Colors\\nblack = (0, 0, 0)\\nwhite = (255, 255, 255)\\ngreen = (0, 255, 0)\\nred = (255, 0, 0)\\n# Snake initial position and properties\\nsnake_pos = [100, 50]\\nsnake_body = [[100, 50], [90, 50], [80, 50]]\\nsnake_direction = \\\"RIGHT\\\"\\nchange_to = snake_direction\\n# Food position and properties\\nfood_pos = [random.randrange(1, (width//10)) * 10, random.randrange(1, (height//10)) * 10]\\nfood_spawn = True\\n# Score\\nscore = 0\\n# Clock to control game speed\\nclock = pygame.time.Clock()\\ndef draw_snake(snake_body):\\n    for pos in snake_body:\\n        pygame.draw.rect(screen, green, (pos[0], pos[1], 10, 10))\\ndef draw_food():\\n    pygame.draw.rect(screen, white, (food_pos[0], food_pos[1], 10, 10))\\ndef message(msg, color):\\n    font = pygame.font.SysFont(None, 48)\\n    screen.blit(font.render(msg, True, color), [width/3, height/3])\\ndef game_over():\\n    message(\\\"Game Over\\\", red)\\n    pygame.display.flip()\\n    pygame.time.wait(1000)\\n    pygame.quit()\\n    quit()\\n# Main game loop\\nwhile True:\\n    for event in pygame.event.get():\\n        if event.type == pygame.QUIT:\\n            pygame.quit()\\n            quit()\\n        elif event.type == pygame.KEYDOWN:\\n            if event.key == pygame.K_UP:\\n                change_to = \\\"UP\\\"\\n            elif event.key == pygame.K_DOWN:\\n                change_to = \\\"DOWN\\\"\\n            elif event.key == pygame.K_LEFT:\\n                change_to = \\\"LEFT\\\"\\n            elif event.key == pygame.K_RIGHT:\\n                change_to = \\\"RIGHT\\\"\\n    # Update snake direction\\n    snake_direction = change_to\\n    # Move the snake\\n    new_pos = [snake_pos[0] + 10 * dir[0] for dir in [(0, 1), (-1, 0), (0, -1), (1, 0)][snake_direction == \\\"DOWN\\\", snake_direction == \\\"UP\\\", snake_direction == \\\"LEFT\\\", snake_direction == \\\"RIGHT\\\"]]\\n    snake_body.insert(0, list(new_pos))\\n    # Check if the snake hits itself\\n    if snake_pos[0] == snake_pos[1] and snake_pos in snake_body[1:]:\\n        game_over()\\n    # Check if the snake hits the wall\\n    if snake_pos[0] < 0 or snake_pos[0] >= width or snake_pos[1] < 0 or snake_pos[1] >= height:\\n        game_over()\\n    # Remove the last segment of the snake\\n    snake_body.pop()\\n    snake_pos = new_pos\\n    # Spawn food\\n    if food_spawn:\\n        food_pos = [random.randrange(1, (width//10)) * 10, random.randrange(1, (height//10)) * 10]\\n        food_spawn = False\\n    # Check if the snake ate the food\\n    if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:\\n        score += 1\\n        food_spawn = True\\n    # Draw the snake and the food\\n    screen.fill(black)\\n    draw_snake(snake_body)\\n    draw_food()\\n    message(\\\"Score: \\\" + str(score), white)\\n    pygame.display.flip()\\n    # Control game speed\\n    clock.tick(10)\\n```\\nExplanation:\\n1. We import the necessary modules, `pygame` for graphics and `random` for generating random food positions.\\n2. We initialize `pygame` and set up the display window.\\n3. We define some colors that we'll use for the game elements.\\n4. We set the initial position and properties of the snake and the food.\\n5. We define functions to draw the snake, draw the food, display a message, and handle game over conditions.\\n6. The main game loop runs continuously until the game is quit.\\n   - It checks for events like key presses and the close button being clicked.\\n   - It updates the snake's direction based on arrow key presses.\\n   - It moves the snake and updates its position.\\n   - It checks for collisions with itself and the walls, and ends the game if a collision occurs.\\n   - It removes the last segment of the snake's body and updates its position.\\n   - It spawns food if it's not already spawned.\\n   - It checks if the snake ate the food and updates the score accordingly.\\n   - It draws the snake, food, and score on the screen.\\n   - It controls the game speed using the clock.\\nThis is a basic implementation of the Snake game. You can further enhance it by adding features like levels, difficulty settings, and sound effects.\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get conversation message",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:6970/api/v1/test/chat/:conversationID",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6970",
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"chat",
+								":conversationID"
+							],
+							"variable": [
+								{
+									"key": "conversationID",
+									"value": "b9e21cfe-c384-440c-a73d-c5810a68b664"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-FAzzTdccAfl0E2Lu/wbvI/6Anvk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 02:45:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messages\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Create new conversation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:6970/api/v1/test/chat/"
+			},
+			"response": [
+				{
+					"name": "Create new conversation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:6970/api/v1/test/chat/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-vmRX1LzPnAQnEpSQEOOrR/28eY0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 02:46:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b9e21cfe-c384-440c-a73d-c5810a68b664\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Request answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:6970/api/v1/test/chat/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6970",
+					"path": [
+						"api",
+						"v1",
+						"test",
+						"chat",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "b9e21cfe-c384-440c-a73d-c5810a68b669"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Request answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:6970/api/v1/test/chat/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6970",
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"chat",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "b9e21cfe-c384-440c-a73d-c5810a68b669"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/event-stream"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 02:50:08 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "data: {\"type\":\"status\",\"status\":\"started\"}\n\ndata: {\"type\":\"status\",\"status\":\"title\",\"message\":\"📧 Order request\"}\n\ndata: {\"type\":\"id\",\"id\":\"b9e21cfe-c384-440c-a73d-c5810a68b664\"}\n\ndata: {\"type\":\"stream\",\"token\":\"HEHEHEHHE \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Here's \"}\n\ndata: {\"type\":\"stream\",\"token\":\"a \"}\n\ndata: {\"type\":\"stream\",\"token\":\"basic \"}\n\ndata: {\"type\":\"stream\",\"token\":\"implementation \"}\n\ndata: {\"type\":\"stream\",\"token\":\"of \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"in \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Python \"}\n\ndata: {\"type\":\"stream\",\"token\":\"using \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"`pygame` \"}\n\ndata: {\"type\":\"stream\",\"token\":\"library. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"I'll \"}\n\ndata: {\"type\":\"stream\",\"token\":\"explain \"}\n\ndata: {\"type\":\"stream\",\"token\":\"each \"}\n\ndata: {\"type\":\"stream\",\"token\":\"step \"}\n\ndata: {\"type\":\"stream\",\"token\":\"as \"}\n\ndata: {\"type\":\"stream\",\"token\":\"we \"}\n\ndata: {\"type\":\"stream\",\"token\":\"go \"}\n\ndata: {\"type\":\"stream\",\"token\":\"along.\\n\\nFirst, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"make \"}\n\ndata: {\"type\":\"stream\",\"token\":\"sure \"}\n\ndata: {\"type\":\"stream\",\"token\":\"you \"}\n\ndata: {\"type\":\"stream\",\"token\":\"have \"}\n\ndata: {\"type\":\"stream\",\"token\":\"`pygame` \"}\n\ndata: {\"type\":\"stream\",\"token\":\"installed. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"You \"}\n\ndata: {\"type\":\"stream\",\"token\":\"can \"}\n\ndata: {\"type\":\"stream\",\"token\":\"install \"}\n\ndata: {\"type\":\"stream\",\"token\":\"it \"}\n\ndata: {\"type\":\"stream\",\"token\":\"using \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"following \"}\n\ndata: {\"type\":\"stream\",\"token\":\"command:\\n```bash\\npip \"}\n\ndata: {\"type\":\"stream\",\"token\":\"install \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame\\n```\\n\\nNow, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"let's \"}\n\ndata: {\"type\":\"stream\",\"token\":\"begin \"}\n\ndata: {\"type\":\"stream\",\"token\":\"coding \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game:\\n```python\\nimport \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame\\nimport \"}\n\ndata: {\"type\":\"stream\",\"token\":\"random\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Initialize \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame\\npygame.init()\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Set \"}\n\ndata: {\"type\":\"stream\",\"token\":\"up \"}\n\ndata: {\"type\":\"stream\",\"token\":\"display\\nwidth, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"height \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"640, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"480\\nscreen \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.display.set_mode((width, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"height))\\npygame.display.set_caption(\\\"Snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Game\\\")\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Colors\\nblack \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0)\\nwhite \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(255, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"255, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"255)\\ngreen \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"255, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0)\\nred \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(255, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0)\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"initial \"}\n\ndata: {\"type\":\"stream\",\"token\":\"position \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"properties\\nsnake_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[100, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"50]\\nsnake_body \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[[100, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"50], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[90, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"50], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[80, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"50]]\\nsnake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"RIGHT\\\"\\nchange_to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_direction\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Food \"}\n\ndata: {\"type\":\"stream\",\"token\":\"position \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"properties\\nfood_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[random.randrange(1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(width//10)) \"}\n\ndata: {\"type\":\"stream\",\"token\":\"* \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"random.randrange(1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(height//10)) \"}\n\ndata: {\"type\":\"stream\",\"token\":\"* \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10]\\nfood_spawn \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"True\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Score\\nscore \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Clock \"}\n\ndata: {\"type\":\"stream\",\"token\":\"to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"control \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"speed\\nclock \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.time.Clock()\\n\\ndef \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw_snake(snake_body):\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"in \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_body:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.draw.rect(screen, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"green, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(pos[0], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pos[1], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10))\\n\\ndef \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw_food():\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.draw.rect(screen, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"white, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(food_pos[0], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_pos[1], \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10))\\n\\ndef \"}\n\ndata: {\"type\":\"stream\",\"token\":\"message(msg, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"color):\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"font \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.font.SysFont(None, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"48)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"screen.blit(font.render(msg, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"True, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"color), \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[width/3, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"height/3])\\n\\ndef \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game_over():\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"message(\\\"Game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Over\\\", \"}\n\ndata: {\"type\":\"stream\",\"token\":\"red)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.display.flip()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.time.wait(1000)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.quit()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"quit()\\n\\n# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Main \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"loop\\nwhile \"}\n\ndata: {\"type\":\"stream\",\"token\":\"True:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event \"}\n\ndata: {\"type\":\"stream\",\"token\":\"in \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.event.get():\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.type \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.QUIT:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.quit()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"quit()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"elif \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.type \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.KEYDOWN:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.K_UP:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"change_to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"UP\\\"\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"elif \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.K_DOWN:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"change_to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"DOWN\\\"\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"elif \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.K_LEFT:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"change_to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"LEFT\\\"\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"elif \"}\n\ndata: {\"type\":\"stream\",\"token\":\"event.key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.K_RIGHT:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"change_to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"RIGHT\\\"\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Update \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"direction\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"change_to\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Move \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"new_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[snake_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"+ \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10 \"}\n\ndata: {\"type\":\"stream\",\"token\":\"* \"}\n\ndata: {\"type\":\"stream\",\"token\":\"dir[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"dir \"}\n\ndata: {\"type\":\"stream\",\"token\":\"in \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[(0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"1), \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(-1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0), \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"-1), \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0)][snake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"DOWN\\\", \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"UP\\\", \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"LEFT\\\", \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\"RIGHT\\\"]]\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_body.insert(0, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"list(new_pos))\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Check \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"hits \"}\n\ndata: {\"type\":\"stream\",\"token\":\"itself\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[1] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"in \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_body[1:]:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game_over()\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Check \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"hits \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"wall\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"< \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0 \"}\n\ndata: {\"type\":\"stream\",\"token\":\"or \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\">= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"width \"}\n\ndata: {\"type\":\"stream\",\"token\":\"or \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[1] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"< \"}\n\ndata: {\"type\":\"stream\",\"token\":\"0 \"}\n\ndata: {\"type\":\"stream\",\"token\":\"or \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[1] \"}\n\ndata: {\"type\":\"stream\",\"token\":\">= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"height:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game_over()\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Remove \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"last \"}\n\ndata: {\"type\":\"stream\",\"token\":\"segment \"}\n\ndata: {\"type\":\"stream\",\"token\":\"of \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_body.pop()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"new_pos\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Spawn \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_spawn:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_pos \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"[random.randrange(1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(width//10)) \"}\n\ndata: {\"type\":\"stream\",\"token\":\"* \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"random.randrange(1, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"(height//10)) \"}\n\ndata: {\"type\":\"stream\",\"token\":\"* \"}\n\ndata: {\"type\":\"stream\",\"token\":\"10]\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_spawn \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"False\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Check \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"ate \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_pos[0] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake_pos[1] \"}\n\ndata: {\"type\":\"stream\",\"token\":\"== \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_pos[1]:\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"score \"}\n\ndata: {\"type\":\"stream\",\"token\":\"+= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"1\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food_spawn \"}\n\ndata: {\"type\":\"stream\",\"token\":\"= \"}\n\ndata: {\"type\":\"stream\",\"token\":\"True\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Draw \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"screen.fill(black)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw_snake(snake_body)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw_food()\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"message(\\\"Score: \"}\n\ndata: {\"type\":\"stream\",\"token\":\"\\\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"+ \"}\n\ndata: {\"type\":\"stream\",\"token\":\"str(score), \"}\n\ndata: {\"type\":\"stream\",\"token\":\"white)\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"pygame.display.flip()\\n\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"# \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Control \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"speed\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"clock.tick(10)\\n```\\n\\nExplanation:\\n1. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"We \"}\n\ndata: {\"type\":\"stream\",\"token\":\"import \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"necessary \"}\n\ndata: {\"type\":\"stream\",\"token\":\"modules, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"`pygame` \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"graphics \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"`random` \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"generating \"}\n\ndata: {\"type\":\"stream\",\"token\":\"random \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food \"}\n\ndata: {\"type\":\"stream\",\"token\":\"positions.\\n2. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"We \"}\n\ndata: {\"type\":\"stream\",\"token\":\"initialize \"}\n\ndata: {\"type\":\"stream\",\"token\":\"`pygame` \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"set \"}\n\ndata: {\"type\":\"stream\",\"token\":\"up \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"display \"}\n\ndata: {\"type\":\"stream\",\"token\":\"window.\\n3. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"We \"}\n\ndata: {\"type\":\"stream\",\"token\":\"define \"}\n\ndata: {\"type\":\"stream\",\"token\":\"some \"}\n\ndata: {\"type\":\"stream\",\"token\":\"colors \"}\n\ndata: {\"type\":\"stream\",\"token\":\"that \"}\n\ndata: {\"type\":\"stream\",\"token\":\"we'll \"}\n\ndata: {\"type\":\"stream\",\"token\":\"use \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"elements.\\n4. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"We \"}\n\ndata: {\"type\":\"stream\",\"token\":\"set \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"initial \"}\n\ndata: {\"type\":\"stream\",\"token\":\"position \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"properties \"}\n\ndata: {\"type\":\"stream\",\"token\":\"of \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food.\\n5. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"We \"}\n\ndata: {\"type\":\"stream\",\"token\":\"define \"}\n\ndata: {\"type\":\"stream\",\"token\":\"functions \"}\n\ndata: {\"type\":\"stream\",\"token\":\"to \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draw \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"display \"}\n\ndata: {\"type\":\"stream\",\"token\":\"a \"}\n\ndata: {\"type\":\"stream\",\"token\":\"message, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"handle \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"over \"}\n\ndata: {\"type\":\"stream\",\"token\":\"conditions.\\n6. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"The \"}\n\ndata: {\"type\":\"stream\",\"token\":\"main \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"loop \"}\n\ndata: {\"type\":\"stream\",\"token\":\"runs \"}\n\ndata: {\"type\":\"stream\",\"token\":\"continuously \"}\n\ndata: {\"type\":\"stream\",\"token\":\"until \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"is \"}\n\ndata: {\"type\":\"stream\",\"token\":\"quit.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"checks \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"events \"}\n\ndata: {\"type\":\"stream\",\"token\":\"like \"}\n\ndata: {\"type\":\"stream\",\"token\":\"key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"presses \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"close \"}\n\ndata: {\"type\":\"stream\",\"token\":\"button \"}\n\ndata: {\"type\":\"stream\",\"token\":\"being \"}\n\ndata: {\"type\":\"stream\",\"token\":\"clicked.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"updates \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake's \"}\n\ndata: {\"type\":\"stream\",\"token\":\"direction \"}\n\ndata: {\"type\":\"stream\",\"token\":\"based \"}\n\ndata: {\"type\":\"stream\",\"token\":\"on \"}\n\ndata: {\"type\":\"stream\",\"token\":\"arrow \"}\n\ndata: {\"type\":\"stream\",\"token\":\"key \"}\n\ndata: {\"type\":\"stream\",\"token\":\"presses.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"moves \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"updates \"}\n\ndata: {\"type\":\"stream\",\"token\":\"its \"}\n\ndata: {\"type\":\"stream\",\"token\":\"position.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"checks \"}\n\ndata: {\"type\":\"stream\",\"token\":\"for \"}\n\ndata: {\"type\":\"stream\",\"token\":\"collisions \"}\n\ndata: {\"type\":\"stream\",\"token\":\"with \"}\n\ndata: {\"type\":\"stream\",\"token\":\"itself \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"walls, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"ends \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"a \"}\n\ndata: {\"type\":\"stream\",\"token\":\"collision \"}\n\ndata: {\"type\":\"stream\",\"token\":\"occurs.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"removes \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"last \"}\n\ndata: {\"type\":\"stream\",\"token\":\"segment \"}\n\ndata: {\"type\":\"stream\",\"token\":\"of \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake's \"}\n\ndata: {\"type\":\"stream\",\"token\":\"body \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"updates \"}\n\ndata: {\"type\":\"stream\",\"token\":\"its \"}\n\ndata: {\"type\":\"stream\",\"token\":\"position.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"spawns \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"it's \"}\n\ndata: {\"type\":\"stream\",\"token\":\"not \"}\n\ndata: {\"type\":\"stream\",\"token\":\"already \"}\n\ndata: {\"type\":\"stream\",\"token\":\"spawned.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"checks \"}\n\ndata: {\"type\":\"stream\",\"token\":\"if \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"ate \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"updates \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"score \"}\n\ndata: {\"type\":\"stream\",\"token\":\"accordingly.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"draws \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"snake, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"food, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"score \"}\n\ndata: {\"type\":\"stream\",\"token\":\"on \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"screen.\\n \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\" \"}\n\ndata: {\"type\":\"stream\",\"token\":\"- \"}\n\ndata: {\"type\":\"stream\",\"token\":\"It \"}\n\ndata: {\"type\":\"stream\",\"token\":\"controls \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game \"}\n\ndata: {\"type\":\"stream\",\"token\":\"speed \"}\n\ndata: {\"type\":\"stream\",\"token\":\"using \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"clock.\\n\\nThis \"}\n\ndata: {\"type\":\"stream\",\"token\":\"is \"}\n\ndata: {\"type\":\"stream\",\"token\":\"a \"}\n\ndata: {\"type\":\"stream\",\"token\":\"basic \"}\n\ndata: {\"type\":\"stream\",\"token\":\"implementation \"}\n\ndata: {\"type\":\"stream\",\"token\":\"of \"}\n\ndata: {\"type\":\"stream\",\"token\":\"the \"}\n\ndata: {\"type\":\"stream\",\"token\":\"Snake \"}\n\ndata: {\"type\":\"stream\",\"token\":\"game. \"}\n\ndata: {\"type\":\"stream\",\"token\":\"You \"}\n\ndata: {\"type\":\"stream\",\"token\":\"can \"}\n\ndata: {\"type\":\"stream\",\"token\":\"further \"}\n\ndata: {\"type\":\"stream\",\"token\":\"enhance \"}\n\ndata: {\"type\":\"stream\",\"token\":\"it \"}\n\ndata: {\"type\":\"stream\",\"token\":\"by \"}\n\ndata: {\"type\":\"stream\",\"token\":\"adding \"}\n\ndata: {\"type\":\"stream\",\"token\":\"features \"}\n\ndata: {\"type\":\"stream\",\"token\":\"like \"}\n\ndata: {\"type\":\"stream\",\"token\":\"levels, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"difficulty \"}\n\ndata: {\"type\":\"stream\",\"token\":\"settings, \"}\n\ndata: {\"type\":\"stream\",\"token\":\"and \"}\n\ndata: {\"type\":\"stream\",\"token\":\"sound \"}\n\ndata: {\"type\":\"stream\",\"token\":\"effects. \"}\n\ndata: {\"type\":\"finalAnswer\",\"text\":\"This is the final answer.\"}\n\n"
+				}
+			]
+		}
+	]
+}
