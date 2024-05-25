@@ -79,19 +79,18 @@ const HomePage = () => {
   const fetchMessage3 = async (message, idx) => {
     setStopStream(false);
     const ctrl = new AbortController();
-    await fetchEventSource(
-      `${process.env.REACT_APP_API_BASE}${
-        process.env.REACT_APP_API_NEW_REQUEST
-      }/${idx ? idx : id}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message,
-        }),
-        onopen(res) {
+	await fetchEventSource(
+	  `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_REQUEST}`,
+	  {
+		  method: "POST",
+		  headers: {
+			  "Content-Type": "application/json",
+		  },
+		  body: JSON.stringify({
+			  conversationId: idx,
+			  message,
+		  }),
+      onopen(res) {
           if (res.ok && res.status === 200) {
             console.log("Connection made ", res);
           } else if (
@@ -138,7 +137,7 @@ const HomePage = () => {
       const eventSource = new EventSource(
         `${process.env.REACT_APP_API_BASE}${
           process.env.REACT_APP_API_NEW_REQUEST
-        }/${idx ? idx : id}`
+        }`
       );
       setStopStream(false);
       eventSource.onmessage = async (event) => {
@@ -181,14 +180,15 @@ const HomePage = () => {
 
       // Thiết lập nội dung cần gửi kèm
       const payload = {
-        message,
+		  message,
+		  conversationId: idx,
       };
 
       // Gửi yêu cầu POST
       const response = await fetch(
         `${process.env.REACT_APP_API_BASE}${
           process.env.REACT_APP_API_NEW_REQUEST
-        }/${idx ? idx : id}`,
+        }`,
         {
           method: "POST",
           headers: {
