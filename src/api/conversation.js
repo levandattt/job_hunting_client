@@ -51,18 +51,22 @@ export const sendMessage = async (id, message) => {
   }
 };
 
-export const getNewConversation = async (id) => {
-  try {
-    const response = await axios.get(
-      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_CONVERSATION}`
-    );
+export const getNewConversation = async (userId) => {
+	try {
+		if (userId === undefined) {
+			userId = 1
+		}
+		const response = await axios.post(
+			`${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_CONVERSATION}`,
+			{ userId }
+		);
 
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(response);
-      }, 2000);
-    });
-  } catch (error) {
-    throw error;
-  }
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				resolve(response);
+			}, 2000);
+		});
+	} catch (error) {
+		throw error;
+	}
 };
