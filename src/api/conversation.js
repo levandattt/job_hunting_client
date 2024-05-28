@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-export const getHistories = async () => {
+export const getHistories = async (userId = 1, limit) => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_GET_CONVERSATION_HISTORY}`
+      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_GET_CONVERSATION_HISTORY}?userId=${userId}`
     );
-
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(response);
@@ -52,21 +51,21 @@ export const sendMessage = async (id, message) => {
 };
 
 export const getNewConversation = async (userId) => {
-	try {
-		if (userId === undefined) {
-			userId = 1
-		}
-		const response = await axios.post(
-			`${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_CONVERSATION}`,
-			{ userId }
-		);
+  try {
+    if (userId === undefined) {
+      userId = 1;
+    }
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_CONVERSATION}`,
+      { userId }
+    );
 
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve(response);
-			}, 2000);
-		});
-	} catch (error) {
-		throw error;
-	}
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(response);
+      }, 2000);
+    });
+  } catch (error) {
+    throw error;
+  }
 };

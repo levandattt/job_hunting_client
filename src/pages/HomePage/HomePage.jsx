@@ -32,7 +32,8 @@ const HomePage = () => {
 
   const fetchData = async (limit = 10, offset = 0) => {
     try {
-      const response = await getHistories(limit, offset);
+      const response = await getHistories(1, limit, offset);
+      console.log("xin chào ", response);
       await setHistories(response?.data?.histories);
     } catch (error) {
       console.error("Error fetching histories:", error);
@@ -68,7 +69,7 @@ const HomePage = () => {
       } else {
         checkID = true;
       }
-      fetchMessage3(message, _id);
+      fetchMessage(message, _id);
       if (!checkID) {
         navigate(`/chat/${_id}`);
       }
@@ -76,21 +77,21 @@ const HomePage = () => {
       console.error("Error sending message:", error);
     }
   };
-  const fetchMessage3 = async (message, idx) => {
+  const fetchMessage = async (message, idx) => {
     setStopStream(false);
     const ctrl = new AbortController();
-	await fetchEventSource(
-	  `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_REQUEST}`,
-	  {
-		  method: "POST",
-		  headers: {
-			  "Content-Type": "application/json",
-		  },
-		  body: JSON.stringify({
-			  conversationId: idx,
-			  message,
-		  }),
-      onopen(res) {
+    await fetchEventSource(
+      `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_NEW_REQUEST}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          conversationId: idx,
+          message,
+        }),
+        onopen(res) {
           if (res.ok && res.status === 200) {
             console.log("Connection made ", res);
           } else if (
@@ -127,114 +128,7 @@ const HomePage = () => {
       }
     );
   };
-  const fetchMessage = async (message, idx) => {
-    try {
-      await setConversation((prevMessages) => [
-        ...prevMessages,
-        { from: "user", content: message },
-      ]);
 
-      const eventSource = new EventSource(
-        `${process.env.REACT_APP_API_BASE}${
-          process.env.REACT_APP_API_NEW_REQUEST
-        }`
-      );
-      setStopStream(false);
-      eventSource.onmessage = async (event) => {
-        const data = JSON.parse(event.data);
-        if (data.type === "status") {
-        } else if (data.type === "stream") {
-          console.log(data);
-          await setNewConversation((prevMessages) => [
-            ...prevMessages,
-            data.token,
-          ]);
-        } else if (data.type === "id") {
-          await setNewConversationId(data.id);
-        } else if (data.type === "finalAnswer") {
-          setStopStream(true);
-          eventSource.close(); // Đóng stream khi nhận được finalAnswer
-        }
-      };
-
-      eventSource.onerror = (error) => {
-        console.error("EventSource failed:", error);
-        setStopStream(true);
-        eventSource.close();
-      };
-
-      return () => {
-        eventSource.close();
-      };
-    } catch (error) {
-      console.error("Error fetching conversation:", error);
-    }
-  };
-  const fetchMessage2 = async (message, idx) => {
-    try {
-      // Cập nhật cuộc trò chuyện với tin nhắn của người dùng
-      await setConversation((prevMessages) => [
-        ...prevMessages,
-        { from: "user", content: message },
-      ]);
-
-      // Thiết lập nội dung cần gửi kèm
-      const payload = {
-		  message,
-		  conversationId: idx,
-      };
-
-      // Gửi yêu cầu POST
-      const response = await fetch(
-        `${process.env.REACT_APP_API_BASE}${
-          process.env.REACT_APP_API_NEW_REQUEST
-        }`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder("utf-8");
-      setStopStream(false);
-
-      while (true) {
-        const { value, done } = await reader.read();
-
-        if (done) {
-          break;
-        }
-
-        const data = decoder.decode(value, { stream: true });
-        console.log("datahihi: ", data);
-        // const parsedData = JSON.parse(data);
-
-        // if (parsedData.type === "status") {
-        //   // Xử lý trạng thái nếu cần
-        // } else if (parsedData.type === "stream") {
-        //   console.log(parsedData);
-        //   await setNewConversation((prevMessages) => [
-        //     ...prevMessages,
-        //     parsedData.token,
-        //   ]);
-        // } else if (parsedData.type === "id") {
-        //   await setNewConversationId(parsedData.id);
-        // } else if (parsedData.type === "finalAnswer") {
-        //   setStopStream(true);
-        //   break; // Dừng đọc stream khi nhận được finalAnswer
-        // }
-      }
-      return () => {
-        reader.cancel();
-      };
-    } catch (error) {
-      console.error("Error fetching conversation:", error);
-    }
-  };
   useEffect(() => {
     if (stopStream && newConversation?.length > 0) {
       const conversationString = newConversation?.join("");
@@ -247,6 +141,12 @@ const HomePage = () => {
       setNewConversation([]);
     }
   }, [stopStream]);
+
+  const onEnter = (e) => {
+    if (e.key === "Enter") {
+      onSubmit(inputValue);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -330,6 +230,7 @@ const HomePage = () => {
                   icon={"🧠"}
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => onEnter(e)}
                   onSubmit={onSubmit}
                 />
               </div>
