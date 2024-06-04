@@ -30,11 +30,10 @@ const Login =  () => {
     // if success, redirect to login page
     // if error, show error message
     event.preventDefault();
-    
+
     // const response = await login(formData);
     const response = await login(formData);
-    
-    console.log(response)
+
     //not connected to the server
     if (response === undefined) {
       toast.error(`Server is not available, please try again later`, {
@@ -48,12 +47,12 @@ const Login =  () => {
         theme: "light",
       });
       return;
-    }      
+    }
     if (response.status === 200) {
       setAccessToken(response.data.data.token.accessToken);
       setRefreshToken(response.data.data.token.refreshToken);
       // set user data to local storage
-      localStorage.setItem('user', JSON.stringify(response.data.data.user));
+      localStorage.setItem("user", JSON.stringify(response.data.data.user));
       navigate("/", { replace: true });
       toast.success(`${response.data.message}`, {
         position: "top-center",
@@ -65,7 +64,7 @@ const Login =  () => {
         progress: undefined,
         theme: "light",
       });
-    }else{
+    } else {
       toast.error(`${response.data.message}`, {
         position: "top-center",
         autoClose: 5000,

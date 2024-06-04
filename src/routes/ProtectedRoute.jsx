@@ -5,7 +5,7 @@ export const ProtectedRoute = () => {
   const { accessToken } = useAuth();
 
   // Check if the user is authenticated
-  console.log("accessToken",accessToken)
+  // console.log("accessToken",accessToken)
 
   if (!accessToken) {
     // If not authenticated, redirect to the login page

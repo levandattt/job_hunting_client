@@ -33,7 +33,6 @@ const HomePage = () => {
   const fetchData = async (limit = 10, offset = 0) => {
     try {
       const response = await getHistories(1, limit, offset);
-      console.log("xin chào ", response);
       await setHistories(response?.data?.histories);
     } catch (error) {
       console.error("Error fetching histories:", error);
@@ -41,7 +40,9 @@ const HomePage = () => {
   };
   const fetchConversation = async (id) => {
     try {
-      setChatLoading(true);
+      if (conversation.length === 0) {
+        setChatLoading(true);
+      }
       const response = await getConversation(id);
       setChatLoading(false);
       await setConversation(response?.data?.messages);
@@ -53,7 +54,6 @@ const HomePage = () => {
   const onSubmit = async (message) => {
     try {
       setInputValue("");
-
       await setConversation((prevMessages) => [
         ...prevMessages,
         { from: "user", content: message },
@@ -65,19 +65,20 @@ const HomePage = () => {
         checkID = false;
         const response = await getNewConversation();
         _id = response?.data?.id;
-        console.log("HHJAHDKJAHSJDKH  ");
       } else {
         checkID = true;
       }
-      fetchMessage(message, _id);
+      let redirect = null;
       if (!checkID) {
-        navigate(`/chat/${_id}`);
+        redirect = `/chat/${_id}`;
       }
+
+      fetchMessage(message, _id, redirect);
     } catch (error) {
       console.error("Error sending message:", error);
     }
   };
-  const fetchMessage = async (message, idx) => {
+  const fetchMessage = async (message, idx, redirect) => {
     setStopStream(false);
     const ctrl = new AbortController();
     await fetchEventSource(
@@ -93,21 +94,19 @@ const HomePage = () => {
         }),
         onopen(res) {
           if (res.ok && res.status === 200) {
-            console.log("Connection made ", res);
+            // console.log("Connection made ", res);
           } else if (
             res.status >= 400 &&
             res.status < 500 &&
             res.status !== 429
           ) {
-            console.log("Client side error ", res);
+            // console.log("Client side error ", res);
           }
         },
         onmessage(event) {
-          console.log("dataeven: ", event.data);
           const parsedData = JSON.parse(event.data);
           if (parsedData.type === "status") {
           } else if (parsedData.type === "stream") {
-            console.log(parsedData);
             setNewConversation((prevMessages) => [
               ...prevMessages,
               parsedData.token,
@@ -115,6 +114,15 @@ const HomePage = () => {
           } else if (parsedData.type === "id") {
             setNewConversationId(parsedData.id);
           } else if (parsedData.type === "finalAnswer") {
+            if (redirect) {
+              // set time out to close the stream
+              setTimeout(() => {
+                navigate(redirect);
+              }, 2000);
+            }
+            // }else{
+            //   setStopStream(true);
+            // }
             setStopStream(true);
           }
         },

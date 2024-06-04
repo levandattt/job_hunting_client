@@ -87,9 +87,11 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
       const renderItems = (items) => {
         return items.map((item) => {
           return (
-            <SidebarItem icon={<TbMessage2 />} id={item.id}>
-              {item.title}
-            </SidebarItem>
+            <div key={item.id}>
+              <SidebarItem icon={<TbMessage2 />} id={item.id}>
+                {item.title}
+              </SidebarItem>
+            </div>
           );
         });
       };
@@ -154,8 +156,8 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
     }
 
     return (
-      <div className={"w-full h-full flex justify-center items-center"}>
-        <span className={"animate-spin h-5 w-5 mr-3 text-slate-500 text-xl"}>
+      <div className={"w-full h-full flex justify-center items-center "}>
+        <span className={"animate-spin h-5 w-5 mr-3 text-slate-500 text-xl "}>
           <RiLoader2Line />
         </span>
       </div>

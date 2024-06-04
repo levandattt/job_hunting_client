@@ -4,14 +4,13 @@ import { MdErrorOutline } from "react-icons/md";
 const Input = ({title, isTitleShow=true, placeholder, value, onChange, type, onKeyStop, name, onKeyDown, required, className, error}) => {
     const [isError, setIsError] = useState(false);
 
-    useEffect(()=>{
-      console.log("error",error)
-        if(error){
-          setIsError(true)
-        }else{
-          setIsError(false);
-        }
-    },[error]);
+    useEffect(() => {
+      if (error) {
+        setIsError(true);
+      } else {
+        setIsError(false);
+      }
+    }, [error]);
 
     const handleOnChange = (e) =>{
         onChange(e);

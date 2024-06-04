@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BsArrowDownRightCircle } from "react-icons/bs";
 
 const convertToHTML = (text) => {
-  console.log(text);
   // Convert **text** to <h2>text</h2>
   text = text?.replace(/\*\*(.*?)\*\*/g, "<h2>$1</h2>");
 
@@ -134,7 +133,9 @@ const ChatBox = ({
                     ? renderUserMessage(message)
                     : renderAssistantMessage(message)}
                 </div>
-                {index % 2 !== 0 && index < messages.length - 1 && <hr />}
+                {index % 2 !== 0 && index < messages.length - 1 && (
+                  <div className={`p-1 border-b-2`}></div>
+                )}
               </div>
             );
           })}
