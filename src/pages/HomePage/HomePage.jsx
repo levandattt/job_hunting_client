@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import {
@@ -12,6 +12,8 @@ import { RiLoader2Line } from "react-icons/ri";
 import ChatInputBox from "./components/InputChatBox";
 import SideBar from "./components/Sidebar";
 import { useParams } from "react-router-dom";
+import { ModelContext } from "../../context/ModelContext";
+
 const HomePage = () => {
   const navigate = useNavigate();
   const [histories, setHistories] = useState({});
@@ -24,6 +26,7 @@ const HomePage = () => {
   const [inputValue, setInputValue] = useState("");
   const { id } = useParams();
   const chatBoxRef = useRef(null);
+
   useEffect(() => {
     if (chatBoxRef.current) {
       chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;

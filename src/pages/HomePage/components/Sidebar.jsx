@@ -101,7 +101,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {todayItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span span className={"text-sm text-slate-500"}>
+                <span span className={"text-base text-slate-500"}>
                   Today
                 </span>
               </div>
@@ -115,7 +115,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {yesterdayItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-sm text-slate-500"}>Yesterday</span>
+                <span className={"text-base text-slate-500"}>Yesterday</span>
               </div>
               <div className="w-full h-0.5 my-3 bg-violet-100"></div>
               {renderItems(yesterdayItems)}
@@ -127,7 +127,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {previous7DaysItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-sm text-slate-500"}>
+                <span className={"text-base text-slate-500"}>
                   Previous 7 days
                 </span>
               </div>
@@ -141,7 +141,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {previous30DaysItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-sm text-slate-500"}>
+                <span className={"text-base text-slate-500"}>
                   Previous 30 days
                 </span>
               </div>

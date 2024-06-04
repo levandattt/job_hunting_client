@@ -2,9 +2,25 @@ import { useState, useEffect } from "react";
 import { BsArrowDownRightCircle } from "react-icons/bs";
 
 const convertToHTML = (text) => {
+  console.log("text", text);
   // Convert **text** to <h2>text</h2>
   text = text?.replace(/\*\*(.*?)\*\*/g, "<h2>$1</h2>");
-
+  // text = text
+  //   .replace(
+  //     /<unk> a href='([^']+)'>([^<]+)<unk> \/a>/,
+  //     " <a href='$1' target='_black'>$2</a> "
+  //   )
+  //   .trim();
+  ("<pad> You can find more information about java posting example at <unk> a href='http://www.indeed.com/job/java-posting-a73db85946b595c6'>java posting, like a java posting,'>java posting, <unk> a href='https://ea-etg.fa.ocs.<unk> /a>.</s>");
+  text = text?.replaceAll("<unk> a", "<a target='_blank' ");
+  text = text?.replaceAll("<unk> /a>", "</a>");
+  text = text?.replaceAll("<unk> /ul>", "</ul>");
+  text = text?.replaceAll("<unk> /li>", "</li>");
+  text = text?.replaceAll("<unk> ul>", "<ul>");
+  text = text?.replaceAll("<unk> li>", "<li>- ");
+  text = text?.replaceAll("<unk> strong>", "<strong>");
+  text = text?.replaceAll("<unk> /strong>", "</strong>");
+  console.log("text", text);
   // Convert ```code``` to <pre><code>code</code></pre>
   text = text?.replace(
     /```([\s\S]*?)```/g,
@@ -71,7 +87,7 @@ const ChatBox = ({
             className="h-full w-full object-cover object-center rounded-full"
           />
         </div>
-        <div className="text-sm font-normal text-slate-700 p-2 rounded-lg">
+        <div className="text-lg font-normal text-slate-700 p-2 rounded-lg">
           <div
             dangerouslySetInnerHTML={{
               __html: convertToHTML(message.content),
@@ -85,13 +101,15 @@ const ChatBox = ({
   const renderAssistantMessage = (message) => {
     return (
       <div className="px-9">
-        <div className={`flex items-center text-sm font-normal text-blue-500`}>
+        <div
+          className={`flex items-center text-base font-normal text-blue-700`}
+        >
           <span className={"my-2"}>Job hunting</span>
           <div className={`px-1`}>
             <BsArrowDownRightCircle />
           </div>
         </div>
-        <div className="text-sm font-normal text-slate-700  rounded-lg">
+        <div className="text-lg font-normal text-slate-700  rounded-lg">
           <div
             dangerouslySetInnerHTML={{
               __html: convertToHTML(message?.content),
@@ -105,13 +123,13 @@ const ChatBox = ({
   const renderNewConversation = (message) => {
     return (
       <div className="px-9">
-        <div className={`flex items-center text-sm font-normal text-blue-500`}>
+        <div className={`flex items-center text-lg font-normal text-blue-700`}>
           <span className={"my-2"}>Job hunting</span>
           <div className={`px-1`}>
             <BsArrowDownRightCircle />
           </div>
         </div>
-        <div className="text-sm font-normal text-slate-700  rounded-lg">
+        <div className="text-lg font-normal text-slate-700  rounded-lg">
           <div
             dangerouslySetInnerHTML={{
               __html: convertToHTML(message?.join("")),
@@ -159,9 +177,18 @@ const ChatBox = ({
             >
               Job Hunting
             </span>
-            <h1 className={"font-bold"}>
-              Good day! How may I assist you today?
+            <h1 className={"font-bold text-center"}>
+              Hello, I'm the Job Hunter Assistant,
             </h1>
+            <h1 className={"font-bold text-center"}>
+              Created by Minh Quan, Van Dat, and Quang Chu.
+            </h1>
+            <h1 className={"font-bold text-center"}>
+              I'm here to help you find a job.
+            </h1>
+            <h1 className={"font-bold text-center"}>
+              How can I assist you today?
+            </h1>{" "}
           </div>
         </div>
       )}
