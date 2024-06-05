@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { BsArrowDownRightCircle } from "react-icons/bs";
 import { ImArrowDownRight2 } from "react-icons/im";
 import { TbCircleArrowDownRight } from "react-icons/tb";
-
+import { MdOutlineCopyAll } from "react-icons/md";
+import { convert } from "html-to-text";
 const convertToHTML = (text) => {
-  console.log("text", text);
   // Convert **text** to <h2>text</h2>
   text = text?.replace(/\*\*(.*?)\*\*/g, "<h2>$1</h2>");
   // text = text
@@ -22,7 +22,6 @@ const convertToHTML = (text) => {
   text = text?.replaceAll("<unk> li>", "<li>- ");
   text = text?.replaceAll("<unk> strong>", "<strong>");
   text = text?.replaceAll("<unk> /strong>", "</strong>");
-  console.log("text", text);
   // Convert ```code``` to <pre><code>code</code></pre>
   text = text?.replace(
     /```([\s\S]*?)```/g,
@@ -79,6 +78,20 @@ const ChatBox = ({
   //   eventSource.close();
   // };
   // }, []);
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+  };
+
+  const convertToText = (text) => {
+    return convert(text);
+  };
+
+  const handleCopy = (text) => {
+    const textToCopy = convertToText(text);
+    copyToClipboard(textToCopy);
+  };
+
   const renderUserMessage = (message) => {
     return (
       <div className=" flex items-center">
@@ -104,15 +117,23 @@ const ChatBox = ({
     return (
       <>
         <div className="px-11">
-          <div className={`text-base font-semibold text-indigo-900`}>
-            <div className={`flex items-center`}>
-              <span className={"my-2 mr-1"}>Job huntingg</span>
-              {/* <span className={` border-2 border-indigo-900 p-1 rounded-full`}>
+          <div className={`flex  items-center justify-between`}>
+            <div className={`text-base font-semibold text-indigo-900`}>
+              <div className={`flex items-center`}>
+                <span className={"my-2 mr-1"}>Job hunting</span>
+                {/* <span className={` border-2 border-indigo-900 p-1 rounded-full`}>
               <ImArrowDownRight2 className={`font-semibol text-xs`} />
             </span> */}
-              {/* <BsArrowDownRightCircle /> */}
-              <TbCircleArrowDownRight />
+                {/* <BsArrowDownRightCircle /> */}
+                <TbCircleArrowDownRight />
+              </div>
             </div>
+            <button
+              onClick={() => handleCopy(message?.content)}
+              className={`text-indigo-900`}
+            >
+              <MdOutlineCopyAll />
+            </button>
           </div>
           <div className="text-base font-normal text-slate-600 rounded-lg">
             <div
@@ -132,7 +153,7 @@ const ChatBox = ({
       <div className="px-11">
         <div className={`text-base font-semibold text-indigo-900`}>
           <div className={`flex items-center`}>
-            <span className={"my-2 mr-1"}>Job huntingg</span>
+            <span className={"my-2 mr-1"}>Job hunting</span>
             {/* <span className={` border-2 border-indigo-900 p-1 rounded-full`}>
               <ImArrowDownRight2 className={`font-semibol text-xs`} />
             </span> */}
@@ -183,20 +204,18 @@ const ChatBox = ({
             <span
               className={`bg-white p-3 rounded-full text-lg font-bold mb-3`}
             >
-              Job Huntingg
+              Job Hunting
             </span>
             <h1 className={"font-bold text-center"}>
-              Hello, I'm the Job Hunter Assistant,
-            </h1>
-            <h1 className={"font-bold text-center"}>
-              Created by Minh Quan, Van Dat, and Quang Chu.
-            </h1>
-            <h1 className={"font-bold text-center"}>
-              I'm here to help you find a job.
-            </h1>
-            <h1 className={"font-bold text-center"}>
-              How can I assist you today?
+              Good day! How may I assist you today?
             </h1>{" "}
+            <span className={`text-slate-400 text-center `}>
+              Hello, I'm the Job Hunter Assistant, created by Minh Quan, Van
+              Dat, and Quang Chu. I'm here to help you find a job.
+            </span>
+            <span className={`text-slate-400 text-center `}>
+              You can donate to us through Techcombank: 19036450623011.
+            </span>
           </div>
         </div>
       )}

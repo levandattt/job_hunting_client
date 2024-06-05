@@ -175,7 +175,6 @@ const HomePage = () => {
     try {
       setChatLoading(true);
       const response = await getNewConversation();
-      console.log(response);
       navigate(`/chat/${response?.data?.id}`);
       setChatLoading(false);
     } catch (error) {

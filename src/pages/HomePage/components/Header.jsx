@@ -18,14 +18,9 @@ const Header = ({ children, className, disabled }) => {
   const [isWrapping, setIsWrapping] = useState(true);
   // onclick
   const handleClick = (model) => {
-    console.log("hihi");
     setModel(model);
     setIsWrapping(!isWrapping);
   };
-
-  useEffect(() => {
-    console.log("model", model);
-  }, [model]);
 
   return (
     <div className={` select-none  w-full flex justify-between items-center `}>
@@ -49,16 +44,18 @@ const Header = ({ children, className, disabled }) => {
           >
             {modelsState?.map((item, index) => {
               return (
-                <>
+                <div key={index}>
                   <button
-                    key={index}
                     className={`font-medium text-slate-600 py-2 px-4 rounded-lg m-1 cursor-pointer w-fit`}
                     onClick={() => handleClick(item)}
                   >
                     {item}
                   </button>
-                  <div className={`border-t-2 border-slate-200`}></div>
-                </>
+                  <div
+                    key={index}
+                    className={`border-t-2 border-slate-200`}
+                  ></div>
+                </div>
               );
             })}
           </div>
