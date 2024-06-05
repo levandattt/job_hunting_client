@@ -16,6 +16,7 @@ export const login = async(account) => {
             }, 2000);
         });
     } catch (error) {
+        console.log("Error sending message:", error);
         return error;
     }
 };

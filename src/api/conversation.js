@@ -11,6 +11,7 @@ export const getHistories = async (userId = 1, limit) => {
       }, 2000);
     });
   } catch (error) {
+    console.log("Error fetching histories:", error);
     throw error;
   }
 };
@@ -27,6 +28,7 @@ export const getConversation = async (id) => {
       }, 2000);
     });
   } catch (error) {
+    console.log("Error fetching conversation:", error);
     throw error;
   }
 };
@@ -46,6 +48,7 @@ export const sendMessage = async (id, message) => {
       }, 2000);
     });
   } catch (error) {
+    console.log("Error sending message:", error);
     throw error;
   }
 };
@@ -66,6 +69,7 @@ export const getNewConversation = async (userId) => {
       }, 2000);
     });
   } catch (error) {
+    console.log("Error fetching new conversation:", error);
     throw error;
   }
 };
