@@ -182,6 +182,7 @@ const HomePage = () => {
       console.error("Error fetching new conversation:", error);
     }
   };
+
   return (
     <div className={"relative overflow-hidden"}>
       <div className={"absolute h-full w-full z-1"}>

@@ -32,51 +32,44 @@ const Routes = () => {
       children: [
         {
           path: "",
-          element: <div>User Home Page</div>,
+          element: <HomePage />,
         },
-       
+        {
+          path: "/chat/:id",
+          element: <HomePage />,
+        },
         {
           path: "/profile",
           element: <div>User Profile</div>,
         },
         {
           path: "/logout",
-          element: <Logout/>,
+          element: <Logout />,
         },
       ],
     },
   ];
 
-  const routesForAdmin=[
+  const routesForAdmin = [
     {
       path: "admin",
-      element: <ProtectedRouteAdmin/>, // Wrap the component in ProtectedRoute
+      element: <ProtectedRouteAdmin />, // Wrap the component in ProtectedRoute
       children: [
         {
           path: "",
-          element: <AdminPage/>,
-          children: [
-          ],
-          
+          element: <AdminPage />,
+          children: [],
         },
         {
           path: "logout",
-          element: <Logout/>,
+          element: <Logout />,
         },
       ],
     },
-  ]
+  ];
 
   // Define routes accessible only to non-authenticated users
   const routesForNotAuthenticatedOnly = [
-    {
-      path: "/",
-      element: <HomePage />,
-    },
-    {
-      path: "/chat/:id",
-      element: <HomePage />,
-    },
     {
       path: "/login",
       element: <Login />,

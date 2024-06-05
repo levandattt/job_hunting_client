@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button2 from "../../../components/Button/Button2";
 import Button3 from "../../../components/Button/Button3";
 import Input2 from "../../../components/Input/Input2";
@@ -7,7 +7,7 @@ import { FiPlus } from "react-icons/fi";
 import { IoSearch } from "react-icons/io5";
 import SidebarItem from "../../../components/Item/SidebarItem";
 import { TbMessage2 } from "react-icons/tb";
-import { IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineLogout } from "react-icons/md";
 import { FaGripLinesVertical } from "react-icons/fa";
 import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
@@ -15,6 +15,7 @@ import { RiLoader2Line } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
 import { LuPanelLeftOpen } from "react-icons/lu";
 const Sidebar = ({ className, children, data, onNewConversation }) => {
+  const navigate = useNavigate();
   const [histories, setHistories] = useState([]);
   const [isColapse, setIsColapse] = useState(false);
   const [isColapseHover, setIsColapseHover] = useState(false);
@@ -101,7 +102,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {todayItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span span className={"text-base text-slate-500"}>
+                <span span className={"text-sm font-semibold text-slate-400"}>
                   Today
                 </span>
               </div>
@@ -115,7 +116,9 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {yesterdayItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-base text-slate-500"}>Yesterday</span>
+                <span className={"text-sm font-semibold text-slate-400"}>
+                  Yesterday
+                </span>
               </div>
               <div className="w-full h-0.5 my-3 bg-violet-100"></div>
               {renderItems(yesterdayItems)}
@@ -127,7 +130,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {previous7DaysItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-base text-slate-500"}>
+                <span className={"text-sm font-semibold text-slate-400"}>
                   Previous 7 days
                 </span>
               </div>
@@ -141,7 +144,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           {previous30DaysItems.length > 0 ? (
             <>
               <div className={"w-full flex justify-between"}>
-                <span className={"text-base text-slate-500"}>
+                <span className={"text-sm font-semibold text-slate-400"}>
                   Previous 30 days
                 </span>
               </div>
@@ -178,6 +181,10 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
     window.addEventListener("resize", handleResize);
   }, []);
 
+  const handleLogout = () => {
+    navigate("/logout");
+  };
+
   return (
     <div
       className={`flex ${className} min-[0px]:max-md:absolute z-3 min-[0px]:max-md:h-full`}
@@ -189,7 +196,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
           }`}
         >
           <div
-            className={`flex flex-col items-center  h-full w-full px-3 py-4`}
+            className={`flex flex-col items-center  h-full w-full px-3 pt-4 pb-2`}
           >
             <div className={`flex flex-col items-center h-full w-full`}>
               <div className={" w-full flex justify-center items-center mb-4"}>
@@ -281,7 +288,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
               </div>
               {/* Settings */}
               <div className={"relative flex flex-col-reverse w-full pt-4"}>
-                <Button3
+                {/* <Button3
                   icon={
                     <img
                       src="/img/avatar.png"
@@ -291,9 +298,18 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
                   }
                 >
                   Lê Văn Đạt
-                </Button3>
-                <Button3 icon={<IoSettingsOutline />} className={`mb-3`}>
+                </Button3> */}
+                {/* <Button3 icon={<IoSettingsOutline />} className={`mb-3`}>
                   Settings
+                </Button3> */}
+                <Button3
+                  icon={<MdOutlineLogout className={`text-slate-500`} />}
+                  className={`mb-3 rounded-3xl`}
+                  onClick={handleLogout}
+                >
+                  <span className={`text-slate-500 mr-3  hover:text-slate-700`}>
+                    Logout
+                  </span>
                 </Button3>
               </div>
             </div>
@@ -339,7 +355,7 @@ const Sidebar = ({ className, children, data, onNewConversation }) => {
             <BsChevronCompactLeft />
           </span>
           <span
-            className={`text-3xl w-7 text-slate-900 flex justify-center transition-opacity ease-linear delay-100 ${
+            className={`text-3xl w-7 text-slate-90place-items-end0 flex justify-center transition-opacity ease-linear delay-100 ${
               isColapse ? "" : "invisible w-0 h-0 opacity-0"
             }`}
           >

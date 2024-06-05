@@ -4,7 +4,7 @@ const Item = ({ children, icon, id, iconOnly, className, disabled }) => {
   return (
     <Link
       to={`/chat/${id}`}
-      className={`text-slate-700 no-underline w-full flex items-center px-3 py-2 mb-4 ${className} `}
+      className={`text-slate-500 font-medium no-underline w-full flex items-center px-3 py-2 mb-4 ${className} `}
       key={id}
     >
       <div className={`flex items-center`}>

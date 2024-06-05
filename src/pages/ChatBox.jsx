@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { BsArrowDownRightCircle } from "react-icons/bs";
+import { ImArrowDownRight2 } from "react-icons/im";
+import { TbCircleArrowDownRight } from "react-icons/tb";
 
 const convertToHTML = (text) => {
   console.log("text", text);
@@ -79,15 +81,15 @@ const ChatBox = ({
   // }, []);
   const renderUserMessage = (message) => {
     return (
-      <div className=" flex">
+      <div className=" flex items-center">
         <div className={`w-9 h-9`}>
           <img
             src="/img/avatar.png"
             alt="logo"
-            className="h-full w-full object-cover object-center rounded-full"
+            className="border-4 border-white-700 h-full w-full object-cover object-center rounded-full"
           />
         </div>
-        <div className="text-lg font-normal text-slate-700 p-2 rounded-lg">
+        <div className="text-base font-semibold text-indigo-950 p-2 rounded-lg">
           <div
             dangerouslySetInnerHTML={{
               __html: convertToHTML(message.content),
@@ -100,16 +102,45 @@ const ChatBox = ({
 
   const renderAssistantMessage = (message) => {
     return (
-      <div className="px-9">
-        <div
-          className={`flex items-center text-base font-normal text-blue-700`}
-        >
-          <span className={"my-2"}>Job hunting</span>
-          <div className={`px-1`}>
-            <BsArrowDownRightCircle />
+      <>
+        <div className="px-11">
+          <div className={`text-base font-semibold text-indigo-900`}>
+            <div className={`flex items-center`}>
+              <span className={"my-2 mr-1"}>Job huntingg</span>
+              {/* <span className={` border-2 border-indigo-900 p-1 rounded-full`}>
+              <ImArrowDownRight2 className={`font-semibol text-xs`} />
+            </span> */}
+              {/* <BsArrowDownRightCircle /> */}
+              <TbCircleArrowDownRight />
+            </div>
+          </div>
+          <div className="text-base font-normal text-slate-600 rounded-lg">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: convertToHTML(message?.content),
+              }}
+            ></div>
           </div>
         </div>
-        <div className="text-lg font-normal text-slate-700  rounded-lg">
+        <div className={`my-4 border-b-2`}></div>
+      </>
+    );
+  };
+
+  const renderNewConversation = (message) => {
+    return (
+      <div className="px-11">
+        <div className={`text-base font-semibold text-indigo-900`}>
+          <div className={`flex items-center`}>
+            <span className={"my-2 mr-1"}>Job huntingg</span>
+            {/* <span className={` border-2 border-indigo-900 p-1 rounded-full`}>
+              <ImArrowDownRight2 className={`font-semibol text-xs`} />
+            </span> */}
+            {/* <BsArrowDownRightCircle /> */}
+            <TbCircleArrowDownRight />
+          </div>
+        </div>
+        <div className="text-base font-normal text-slate-600 rounded-lg">
           <div
             dangerouslySetInnerHTML={{
               __html: convertToHTML(message?.content),
@@ -119,47 +150,24 @@ const ChatBox = ({
       </div>
     );
   };
-
-  const renderNewConversation = (message) => {
-    return (
-      <div className="px-9">
-        <div className={`flex items-center text-lg font-normal text-blue-700`}>
-          <span className={"my-2"}>Job hunting</span>
-          <div className={`px-1`}>
-            <BsArrowDownRightCircle />
-          </div>
-        </div>
-        <div className="text-lg font-normal text-slate-700  rounded-lg">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: convertToHTML(message?.join("")),
-            }}
-          ></div>
-        </div>
-      </div>
-    );
-  };
   return (
     <>
       {messages?.length > 0 ? (
-        <div className={`pt-3 pb-36`}>
+        <div className={`pb-28`}>
           {messages?.map((message, index) => {
             return (
               <div key={message.id}>
-                <div className={`${index % 2 !== 0 ? "pb-10 pt-3" : "pt-10"}`}>
+                <div className={``}>
                   {message.from === "user"
                     ? renderUserMessage(message)
                     : renderAssistantMessage(message)}
                 </div>
-                {index % 2 !== 0 && index < messages.length - 1 && (
-                  <div className={`p-1 border-b-2`}></div>
-                )}
               </div>
             );
           })}
           {newConversationState.length > 0 && (
             <div>
-              <div className={`pb-10 pt-3`}>
+              <div className={`pb-3 pt-1`}>
                 {renderNewConversation(newConversationState)}
               </div>
             </div>
@@ -175,7 +183,7 @@ const ChatBox = ({
             <span
               className={`bg-white p-3 rounded-full text-lg font-bold mb-3`}
             >
-              Job Hunting
+              Job Huntingg
             </span>
             <h1 className={"font-bold text-center"}>
               Hello, I'm the Job Hunter Assistant,
