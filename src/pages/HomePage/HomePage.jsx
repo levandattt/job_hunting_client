@@ -35,7 +35,8 @@ const HomePage = () => {
 
   const fetchData = async (limit = 10, offset = 0) => {
     try {
-      const response = await getHistories(1, limit, offset);
+      const userId = localStorage.getItem("user") || 1;
+      const response = await getHistories(userId, limit, offset);
       await setHistories(response?.data?.histories);
     } catch (error) {
       console.error("Error fetching histories:", error);
@@ -66,7 +67,8 @@ const HomePage = () => {
       let _id = id;
       if (!_id) {
         checkID = false;
-        const response = await getNewConversation();
+        const userId = localStorage.getItem("user") || 1;
+        const response = await getNewConversation(userId);
         _id = response?.data?.id;
       } else {
         checkID = true;
@@ -174,7 +176,8 @@ const HomePage = () => {
   const onNewConversation = async () => {
     try {
       setChatLoading(true);
-      const response = await getNewConversation();
+      const userId = localStorage.getItem("user") || 1;
+      const response = await getNewConversation(userId);
       navigate(`/chat/${response?.data?.id}`);
       setChatLoading(false);
     } catch (error) {

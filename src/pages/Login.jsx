@@ -71,7 +71,7 @@ const Login = () => {
       // });
     } else {
       setHeadError("Invalid Username or Password");
-      toast.error(`${response.response.data.detail}`, {
+      toast.error(`${response?.response?.data?.detail}`, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
